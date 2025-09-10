@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open and Close Tab</title>
+</head>
+<body>
+  <button onclick="openTab()">Open Google</button>
+  <button onclick="closeTab()">Close Google</button>
+
+  <script>
+    let newWindow;
+
+    function openTab() {
+      newWindow = window.open("https://www.google.com/search?q=zootopia", "_blank");
+    }
+
+    function closeTab() {
+      if (newWindow) {
+        newWindow.close();
+      }
+    }
+  </script>
+</body>
+</html>

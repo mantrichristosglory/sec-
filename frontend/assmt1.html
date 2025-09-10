@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form - Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            border: 2px solid black;
+            width: 40%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: lightgrey;
+            border-radius: 8px;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+        }
+
+        .form label {
+            font-weight: bold;
+        }
+
+        .form input, .form select {
+            padding: 5px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        .form .full-width {
+            grid-column: span 2;
+        }
+
+        button {
+            grid-column: span 2;
+            padding: 10px;
+            background-color: #0073e6;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+    <form class="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="usn">USN</label>
+        <input type="text" id="usn" name="usn" placeholder="University Seat Number">
+
+        <label for="gender">Gender</label>
+        <div>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+        </div>
+
+        <label for="hobbies">Hobbies</label>
+        <div>
+            <input type="checkbox" name="hobby" value="Reading"> Reading
+            <input type="checkbox" name="hobby" value="Sports"> Sports
+            <input type="checkbox" name="hobby" value="Music"> Music
+        </div>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
